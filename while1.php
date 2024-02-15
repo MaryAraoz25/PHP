@@ -12,7 +12,7 @@ $temperatura = 0;
 requiere indicar el contador o sumador*/
 // mientras más proximo al valor 100 pintar en un tono rojo más fuerte
 while($temperatura <= 100){
-    echo " La Temperatura es: $temperatura";
+    echo " La Temperatura es:  $temperatura <br>";
     $temperatura++;
 }
 ?>

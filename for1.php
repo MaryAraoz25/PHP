@@ -6,22 +6,30 @@
 </head>
 <body>
 <?php
-
-
-
-#imprimir una tabla de multiplicar con for()
-//luego mejorar para imprimir todas las tablas del 1 al 10
-for ($x = 0 ; $x <= 10 ; $x++){
-    echo "<br> 9 x $x = ". (9*$x)."<br>";
+$tabla = 12;
+if($tabla % 2 == 0){
+    $divisor =2;
+}else{
+    $divisor = 3;
 }
-echo "<hr>";
-for ($x = 1 ; $x <= 10 ; $x++){
+echo "<table width='100%' border='1'>";
+echo "<tr>";
+for ($x = 1 ; $x <= $tabla ; $x++){
+    echo "<td>";
     for ($y = 0 ; $y <= 10 ; $y++){
-        echo "<br> $x x $y = ". ($x*$y)."<br>";
-        
+        echo "<br> $x x $y = ". ($x*$y);  
     }
-    echo "<hr>";
+    if($x % $divisor == 0){
+        echo "</td>";
+        echo "</tr>";
+        if($x < $tabla){
+            echo "<tr>";
+        }
+    }else{
+        echo "</td>";
+    }
 }
+echo "</table>";
 ?>
 </body>
 </html>
